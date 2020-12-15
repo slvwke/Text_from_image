@@ -7,7 +7,7 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import *
 from PIL import ImageGrab, ImageTk, Image
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'D:\GIT\Text_from_image\Tesseract-OCR\\tesseract.exe'
 
 main_win = tkinter.Tk()
 main_win.geometry("1000x500")
@@ -16,7 +16,7 @@ scrollbar.pack(side=tkinter.LEFT, fill=tkinter.Y)
 
 
 def fromClipboard():
-    text.delete("1.0","end")
+    text.delete("1.0", "end")
     img = ImageGrab.grabclipboard()
     img.save('paste.png', 'PNG')
     imgfc = 'paste.png'
